@@ -63,6 +63,8 @@
     <div id="waline">
         <script type="module">
             import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+            const AV = require("leancloud-storage");
+            const { Query, User } = AV;
    
             init({
                 el: '#waline',
