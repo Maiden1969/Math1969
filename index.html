@@ -22,8 +22,12 @@
             background-color: lightgreen;
         }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+    <!-- Waline -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    />
 </head>
 <body>
     <center>
@@ -56,24 +60,24 @@
         </div>
     </div>
 
-    <div id="gitalk-container">
-
+    <div id="waline">
+        <script type="module">
+            import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+   
+            init({
+                el: '#waline',
+                serverURL: 'https://comments-f9rb.vercel.app',  /* enter your server url */
+                comment: true,
+                texRenderer: (blockMode, tex) =>
+                window.MathJax.startup.adaptor.outerHTML(
+                    window.MathJax.tex2svg(tex, {
+                        display: blockMode,
+                    }),
+                ),
+            });
+        </script>
     </div>
 
-    <script>
-        var gitalk = new Gitalk({
-        clientID: 'Ov23liHtgcIi0zu47rfy',
-        clientSecret: '910ff9400dace23014188869381e4b0171232260',
-        repo: 'gitalk-comments',
-        owner: 'Maiden1969',
-        admin:  ['Maiden1969'],
-        id: location.pathname,      // Ensure uniqueness and len
-        language:'zh-CN',
-        distractionFreeMode: false// Facebook-like distraction
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
 
 </body>
 </html>
