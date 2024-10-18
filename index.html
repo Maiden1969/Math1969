@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,100 +11,103 @@
             display: flex;
             text-align: center;
         }
+
         .box {
             width: 50%;
             height: 100px;
             border: 1px solid black;
         }
+
         .box1 {
             background-color: lightblue;
         }
+
         .box2 {
             background-color: lightgreen;
         }
     </style>
 
-     <!-- Waline -->
-     <link
-     rel="stylesheet"
-     href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-     />
-     <!-- 引入 layui.css -->
+    <!-- Waline -->
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+    <!-- 引入 layui.css -->
     <link href="//unpkg.com/layui@2.9.18/dist/css/layui.css" rel="stylesheet">
     <!-- 引入 layui.js -->
     <script src="//unpkg.com/layui@2.9.18/dist/layui.js"></script>
 </head>
+
 <body>
-    <center>
-        <h1 style="font-style:oblique;font-size: 70px;">
-            Math1969.top
-        </h1>
-        <br>
-        <h2>
-            分享各种数学内容
-            <br>
-            <b style="text-decoration-line: underline">经常更新</b>
-        </h2>
-    </center>
+    <div class="layui-carousel" id="my_carousel">
+        <div carousel-item>
+            <center>
+                <div style="font-size: 80px;">Math1969.top</div>
+            </center>
+            <center>
+                <div style="font-size: 80px;">分享各种数学内容</div>
+            </center>
+            <center>
+                <div style="font-size: 80px;">经常更新</div>
+            </center>
+        </div>
+    </div>
 
     <div class="layui-bg-gray" style="padding: 16px 90px 16px 90px;">
         <div class="layui-row layui-col-space30">
             <div class="layui-col-md6">
                 <div class="layui-card">
-                  <center>
-                      <div class="layui-card-header">集萃</div>
-                      <div class="layui-card-body">
-                        <blockquote class="layui-elem-quote" style = "font-style: italic;">
-                          分享有意思的题目，具有一定的深度和难度
-                        </blockquote>
-                      
-                        <a href="puzzles/集萃.html" class="layui-btn" target="_blank">进入</a>
-                      </div>
-                  </center> 
+                    <center>
+                        <div class="layui-card-header">集萃</div>
+                        <div class="layui-card-body">
+                            <blockquote class="layui-elem-quote" style="font-style: italic;">
+                                分享有意思的题目，具有一定的深度和难度
+                            </blockquote>
+
+                            <a href="puzzles/集萃.html" class="layui-btn" target="_blank">进入</a>
+                        </div>
+                    </center>
                 </div>
-              </div>
-              <div class="layui-col-md6">
+            </div>
+            <div class="layui-col-md6">
                 <div class="layui-card">
-                  <center>
-                      <div class="layui-card-header">专题练习</div>
-                      <div class="layui-card-body">
-                        <blockquote class="layui-elem-quote" style = "font-style: italic;">
-                          针对不同章节的专项练习题，以中档题为主
-                        </blockquote>
-                      
-                        <a href="puzzles/专题练习.html" class="layui-btn" target="_blank">进入</a>
-                      </div>
-                  </center> 
+                    <center>
+                        <div class="layui-card-header">专题练习</div>
+                        <div class="layui-card-body">
+                            <blockquote class="layui-elem-quote" style="font-style: italic;">
+                                针对不同章节的专项练习题，以中档题为主
+                            </blockquote>
+
+                            <a href="puzzles/专题练习.html" class="layui-btn" target="_blank">进入</a>
+                        </div>
+                    </center>
                 </div>
-              </div>
-          <div class="layui-col-md6">
-            <div class="layui-card">
-              <center>
-                  <div class="layui-card-header">复习参考</div>
-                  <div class="layui-card-body">
-                    <blockquote class="layui-elem-quote" style = "font-style: italic;">
-                      本人编写的复习资料、讲义
-                    </blockquote>
-                  
-                    <a href="reviews/review.html" class="layui-btn" target="_blank">进入</a>
-                  </div>
-              </center> 
             </div>
-          </div>
-          <div class="layui-col-md6">
-            <div class="layui-card">
-              <center>
-                  <div class="layui-card-header">暂无</div>
-                  <div class="layui-card-body">
-                    <blockquote class="layui-elem-quote" style = "font-style: italic;">
-                      暂无
-                    </blockquote>
-                  </div>
-              </center> 
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <center>
+                        <div class="layui-card-header">复习参考</div>
+                        <div class="layui-card-body">
+                            <blockquote class="layui-elem-quote" style="font-style: italic;">
+                                本人编写的复习资料、讲义
+                            </blockquote>
+
+                            <a href="reviews/review.html" class="layui-btn" target="_blank">进入</a>
+                        </div>
+                    </center>
+                </div>
             </div>
-          </div>
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <center>
+                        <div class="layui-card-header">敬请期待</div>
+                        <div class="layui-card-body">
+                            <blockquote class="layui-elem-quote" style="font-style: italic;">
+                                敬请期待
+                            </blockquote>
+                        </div>
+                    </center>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
     <br>
     <br>
@@ -111,16 +115,33 @@
 
     <br>
 
-     <!-- ... -->
+    <!-- ... -->
     <div id="waline"></div>
     <script type="module">
         import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
         init({
-        el: '#waline',
-        serverURL: 'https://vercel.zkrmath.xyz',
+            el: '#waline',
+            serverURL: 'https://vercel.zkrmath.xyz',
+        });
+    </script>
+
+    <div id="my_carousel_render"></div>
+    <script>
+        layui.use(function () {
+            var carousel = layui.carousel;
+           
+            // 渲染 - 设置时间间隔、动画类型、宽高度等属性
+            carousel.render({
+                elem: '#my_carousel',
+                interval: 1300,
+                anim: 'fade',
+                width: 'auto',
+                height: '150px'
+            });
         });
     </script>
 
 </body>
+
 </html>
