@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "leancloud-storage": "^4.15.2"
+    "layui": "^2.9.18",
+    "leancloud-storage": "^4.15.2",
+    "vuetify": "^3.7.3"
   }
 }

@@ -28,6 +28,10 @@
      rel="stylesheet"
      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
      />
+     <!-- 引入 layui.css -->
+    <link href="//unpkg.com/layui@2.9.18/dist/css/layui.css" rel="stylesheet">
+    <!-- 引入 layui.js -->
+    <script src="//unpkg.com/layui@2.9.18/dist/layui.js"></script>
 </head>
 <body>
     <center>
@@ -36,38 +40,75 @@
         </h1>
         <br>
         <h2>
-            分享初等数学中的趣题、难题集萃，以及本人编写的学习资料。
+            分享各种数学内容
             <br>
-            <b style="text-decoration-line: underline">每周日更新。</b>
+            <b style="text-decoration-line: underline">经常更新</b>
         </h2>
     </center>
-    
-   
-    <div class="container">
-        <div class="box box1">
-            <li>
-                <b>集萃_1</b>
-                <a href = "puzzles/treasury_1/集萃_1.html" style="font-size: large;">在线预览</a>
-                <a href = "puzzles/treasury_1/集萃_1.pdf" download="集萃_1.pdf">下载pdf(可打印)</a>
-            </li>
+
+    <div class="layui-bg-gray" style="padding: 16px 90px 16px 90px;">
+        <div class="layui-row layui-col-space30">
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                  <center>
+                      <div class="layui-card-header">集萃</div>
+                      <div class="layui-card-body">
+                        <blockquote class="layui-elem-quote" style = "font-style: italic;">
+                          分享有意思的题目，具有一定的深度和难度
+                        </blockquote>
+                      
+                        <a href="puzzles/集萃.html" class="layui-btn" target="_blank">进入</a>
+                      </div>
+                  </center> 
+                </div>
+              </div>
+              <div class="layui-col-md6">
+                <div class="layui-card">
+                  <center>
+                      <div class="layui-card-header">专题练习</div>
+                      <div class="layui-card-body">
+                        <blockquote class="layui-elem-quote" style = "font-style: italic;">
+                          针对不同章节的专项练习题，以中档题为主
+                        </blockquote>
+                      
+                        <a href="puzzles/专题练习.html" class="layui-btn" target="_blank">进入</a>
+                      </div>
+                  </center> 
+                </div>
+              </div>
+          <div class="layui-col-md6">
+            <div class="layui-card">
+              <center>
+                  <div class="layui-card-header">复习参考</div>
+                  <div class="layui-card-body">
+                    <blockquote class="layui-elem-quote" style = "font-style: italic;">
+                      本人编写的复习资料、讲义
+                    </blockquote>
+                  
+                    <a href="reviews/review.html" class="layui-btn" target="_blank">进入</a>
+                  </div>
+              </center> 
+            </div>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-card">
+              <center>
+                  <div class="layui-card-header">暂无</div>
+                  <div class="layui-card-body">
+                    <blockquote class="layui-elem-quote" style = "font-style: italic;">
+                      暂无
+                    </blockquote>
+                  </div>
+              </center> 
+            </div>
+          </div>
         </div>
-        <div class="box box2">
-            <li>
-                <b>必修一复习参考</b>
-                <a href = "reviews/必修一review/必修一review.html" style="font-size: large;">在线预览</a>
-                <a href = "reviews/必修一review/必修一review.pdf" download="必修一review.pdf">下载pdf(可打印)</a>
-            </li>
-        </div>
-    </div>
+      </div>
+
     <br>
     <br>
     <br>
 
-   <!-- <center>
-        <div>
-            <a href = "https://vercel.zkrmath.xyz" style="font-size: xx-large; background-color: hsla(120, 100%, 50%, 0.3);text-decoration: none;">前往评论区</a>
-        </div>
-    </center>-->
     <br>
 
      <!-- ... -->
@@ -80,10 +121,6 @@
         serverURL: 'https://vercel.zkrmath.xyz',
         });
     </script>
-
-   
-       
-
 
 </body>
 </html>
