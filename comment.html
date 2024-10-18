@@ -11,24 +11,15 @@
      />
 </head>
 <body>
-    <div id="waline">
-        <script type="module">
-            import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-            const AV = require("leancloud-storage");
-            const { Query, User } = AV;
-   
-            init({
-                el: '#waline',
-                serverURL: 'https://vercel.math1969.top',  /* enter your server url */
-                comment: true,
-                texRenderer: (blockMode, tex) =>
-                window.MathJax.startup.adaptor.outerHTML(
-                    window.MathJax.tex2svg(tex, {
-                        display: blockMode,
-                    }),
-                ),
-            });
-        </script>
-    </div>
+    <!-- ... -->
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://vercel.zkrmath.xyz',
+    });
+  </script>
 </body>
 </html>

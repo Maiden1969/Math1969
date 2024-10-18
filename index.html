@@ -70,24 +70,19 @@
     </center>-->
     <br>
 
+     <!-- ... -->
     <div id="waline"></div>
-        <script type="module">
-            import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-            const AV = require("leancloud-storage");
-            const { Query, User } = AV;
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+        init({
+        el: '#waline',
+        serverURL: 'https://vercel.zkrmath.xyz',
+        });
+    </script>
+
    
-            init({
-                el: '#waline',
-                serverURL: 'https://vercel.zkrmath.xyz',  /* enter your server url */
-                comment: true,
-                texRenderer: (blockMode, tex) =>
-                window.MathJax.startup.adaptor.outerHTML(
-                    window.MathJax.tex2svg(tex, {
-                        display: blockMode,
-                    }),
-                ),
-            });
-        </script>
+       
 
 
 </body>
