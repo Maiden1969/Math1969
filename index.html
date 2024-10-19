@@ -129,7 +129,7 @@
         <i class="layui-icon layui-icon-headset"></i>
     </button>
     学累了就来听会歌吧
-    <audio id="musicPlayer" src="music/天鸟船神社.mp3" preload="auto"></audio>
+    <audio id="musicPlayer" src="music/天鸟船神社.mp3" preload="auto" loop></audio>
    
 
 
@@ -141,10 +141,10 @@
     <script>
         document.getElementById('playButton').addEventListener('click', function () {
             var audio = document.getElementById('musicPlayer');
-            if (audio.paused) {
-                audio.play();
+            if (audio.getAttribute('controls')){
+                audio.removeAttribute('controls');
             } else {
-                audio.pause();
+                audio.setAttribute('controls', true);
             }
         });
     </script>
