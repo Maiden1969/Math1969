@@ -79,7 +79,7 @@
                                 <a href="puzzles/专题练习.html" class="layui-btn" target="_blank">进入</a>
                             </div>
                         </center>
-                    </fieldset>  
+                    </fieldset>
                 </div>
             </div>
             <div class="layui-col-md6">
@@ -109,8 +109,8 @@
                                 <a href="tz_papers/太中试卷.html" class="layui-btn" target="_blank">进入</a>
                             </div>
                         </center>
-                       
-                      </fieldset>
+
+                    </fieldset>
                 </div>
             </div>
         </div>
@@ -125,11 +125,30 @@
         <i class="layui-icon layui-icon-refresh-3"></i>
     </button>
     刷新页面
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="playButton">
+        <i class="layui-icon layui-icon-headset"></i>
+    </button>
+    学累了就来听会歌吧
+    <audio id="musicPlayer" src="music/天鸟船神社.mp3" preload="auto"></audio>
+   
+
+
     <script>
         document.getElementById('refreshBtn').addEventListener('click', function () {
             location.reload();
         });
     </script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function () {
+            var audio = document.getElementById('musicPlayer');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+    
 
     <!-- ... -->
     <div id="waline"></div>
