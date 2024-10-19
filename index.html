@@ -29,10 +29,10 @@
 
     <!-- Waline -->
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-    <!-- 引入 layui.css -->
-    <link href="//unpkg.com/layui@2.9.18/dist/css/layui.css" rel="stylesheet">
-    <!-- 引入 layui.js -->
-    <script src="//unpkg.com/layui@2.9.18/dist/layui.js"></script>
+    <!-- 引入layui.css -->
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <!-- 引入layui.js -->
+    <script src="./layui/layui.js"></script>
 </head>
 
 <body>
@@ -116,16 +116,16 @@
     <br>
     <br>
 
-    <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" id = 'refreshBtn' onclick="location.reload()">
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" id='refreshBtn' onclick="location.reload()">
         <i class="layui-icon layui-icon-refresh-3"></i>
     </button>
     刷新页面
     <script>
-        document.getElementById('refreshBtn').addEventListener('click', function() {
-          location.reload();
+        document.getElementById('refreshBtn').addEventListener('click', function () {
+            location.reload();
         });
     </script>
-    
+
     <!-- ... -->
     <div id="waline"></div>
     <script type="module">
@@ -141,7 +141,7 @@
     <script>
         layui.use(function () {
             var carousel = layui.carousel;
-           
+
             // 渲染 - 设置时间间隔、动画类型、宽高度等属性
             carousel.render({
                 elem: '#my_carousel',
