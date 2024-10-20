@@ -36,7 +36,8 @@
 
 </head>
 
-<body>
+<>
+    <!-- 网页公告 -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             fetch('/announcement.json')
@@ -50,7 +51,7 @@
                             var layer = layui.layer;
                             layer.open({
                                 title: '更新公告',
-                                content: data.message,
+                                content: data.message.replace(/\n/g, '<br>'), // 将换行符\n替换为 <br>
                                 btn: ['确定'],
                                 yes: function (index, layero) {
                                     // 关闭弹窗
@@ -60,22 +61,12 @@
                         });
                         localStorage.setItem('version', currentVersion);
                     }
-                    layui.use('layer', function () {
-                        var layer = layui.layer;
-                        layer.open({
-                            title: '更新公告',
-                            content: data.message.replace(/\n/g, '<br>'), // 将换行符\n替换为 <br>
-                            btn: ['确定'],
-                            yes: function (index, layero) {
-                                // 关闭弹窗
-                                layer.close(index);
-                            }
-                        });
-                    });
                 })
                 .catch(error => console.error('Error fetching announcement:', error));
         });
     </script>
+
+    <!--轮播图-->
     <div class="layui-carousel" id="my_carousel">
         <div carousel-item>
             <center>
@@ -90,6 +81,7 @@
         </div>
     </div>
 
+    <!--导航页-->
     <div class="layui-bg-gray" style="padding: 16px 50px 16px 50px;">
         <div class="layui-row layui-col-space30">
             <div class="layui-col-md6">
@@ -161,6 +153,7 @@
     <br>
     <br>
 
+    <!--按钮小功能-->
     <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" id='refreshBtn' onclick="location.reload()">
         <i class="layui-icon layui-icon-refresh-3"></i>
     </button>
@@ -170,8 +163,6 @@
     </button>
     学累了就来听会歌吧
     <audio id="musicPlayer" src="music/天鸟船神社.mp3" preload="auto" loop></audio>
-
-
 
     <script>
         document.getElementById('refreshBtn').addEventListener('click', function () {
@@ -193,7 +184,7 @@
     </script>
 
 
-    <!-- ... -->
+    <!-- 评论区 -->
     <div id="waline"></div>
     <script type="module">
         import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
@@ -245,6 +236,6 @@
 
 
 
-</body>
+    </body>
 
 </html>
