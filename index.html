@@ -45,21 +45,21 @@
                     const currentVersion = data.version;
                     const storedVersion = localStorage.getItem('version');
 
-                      if (storedVersion === null || storedVersion !== currentVersion) {
-                        layui.use('layer', function() {
-                          var layer = layui.layer;
-                          layer.open({
-                            title: '更新公告',
-                            content: data.message,
-                            btn: ['确定'],
-                            yes: function(index, layero) {
-                              // 关闭弹窗
-                              layer.close(index);
-                            }
-                          });
+                    if (storedVersion === null || storedVersion !== currentVersion) {
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            layer.open({
+                                title: '更新公告',
+                                content: data.message,
+                                btn: ['确定'],
+                                yes: function (index, layero) {
+                                    // 关闭弹窗
+                                    layer.close(index);
+                                }
+                            });
                         });
                         localStorage.setItem('version', currentVersion);
-                      }
+                    }
                     layui.use('layer', function () {
                         var layer = layui.layer;
                         layer.open({
@@ -165,7 +165,7 @@
         <i class="layui-icon layui-icon-refresh-3"></i>
     </button>
     刷新页面
-    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="playButton">
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="playButton" lay-on="tips">
         <i class="layui-icon layui-icon-headset"></i>
     </button>
     学累了就来听会歌吧
@@ -185,6 +185,9 @@
                 audio.removeAttribute('controls');
             } else {
                 audio.setAttribute('controls', true);
+                layer.tips('曲名：天鸟船神社的结界', this, {
+                    tips: 1
+                });
             }
         });
     </script>
