@@ -37,6 +37,45 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/announcement.json')
+                .then(response => response.json())
+                .then(data => {
+                    const currentVersion = data.version;
+                    const storedVersion = localStorage.getItem('version');
+
+                      if (storedVersion === null || storedVersion !== currentVersion) {
+                        layui.use('layer', function() {
+                          var layer = layui.layer;
+                          layer.open({
+                            title: '更新公告',
+                            content: data.message,
+                            btn: ['确定'],
+                            yes: function(index, layero) {
+                              // 关闭弹窗
+                              layer.close(index);
+                            }
+                          });
+                        });
+                        localStorage.setItem('version', currentVersion);
+                      }
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.open({
+                            title: '更新公告',
+                            content: data.message.replace(/\n/g, '<br>'), // 将换行符\n替换为 <br>
+                            btn: ['确定'],
+                            yes: function (index, layero) {
+                                // 关闭弹窗
+                                layer.close(index);
+                            }
+                        });
+                    });
+                })
+                .catch(error => console.error('Error fetching announcement:', error));
+        });
+    </script>
     <div class="layui-carousel" id="my_carousel">
         <div carousel-item>
             <center>
@@ -131,7 +170,7 @@
     </button>
     学累了就来听会歌吧
     <audio id="musicPlayer" src="music/天鸟船神社.mp3" preload="auto" loop></audio>
-   
+
 
 
     <script>
@@ -142,14 +181,14 @@
     <script>
         document.getElementById('playButton').addEventListener('click', function () {
             var audio = document.getElementById('musicPlayer');
-            if (audio.getAttribute('controls')){
+            if (audio.getAttribute('controls')) {
                 audio.removeAttribute('controls');
             } else {
                 audio.setAttribute('controls', true);
             }
         });
     </script>
-    
+
 
     <!-- ... -->
     <div id="waline"></div>
@@ -178,56 +217,30 @@
         });
     </script>
 
-<!-- 修改位置,left或者right -->
-<div class="pio-container right">   
-    <div class="pio-action"></div>
-    <!-- 修改大小 -->
-    <canvas id="pio" width="180" height="220"></canvas>  
-</div>
-<link rel="stylesheet" href="banniang/css/pio.css">
-<script src="banniang/js/pio.js"></script>
-<script src="banniang/js/l2d.js"></script>
-<script>
-    var pio = new Paul_Pio({
-    "mode": "fixed",
-    "tips": true,
-    "hidden": true,
-    "content": {
-        "welcome": ["欢迎来到Math1969！", "博主每天都有些折腾记录，欢迎前往他的小窝阅读~"],
-    },
-    "model": [
-    "banniang/live2d-widget-models/live2d-widget-model-wanko/assets/wanko.model.json", //狗?!
-    ]
-});
-</script>
+    <!-- 修改位置,left或者right -->
+    <div class="pio-container right">
+        <div class="pio-action"></div>
+        <!-- 修改大小 -->
+        <canvas id="pio" width="180" height="220"></canvas>
+    </div>
+    <link rel="stylesheet" href="banniang/css/pio.css">
+    <script src="banniang/js/pio.js"></script>
+    <script src="banniang/js/l2d.js"></script>
+    <script>
+        var pio = new Paul_Pio({
+            "mode": "fixed",
+            "tips": true,
+            "hidden": true,
+            "content": {
+                "welcome": ["欢迎来到Math1969！", "博主每天都有些折腾记录，欢迎前往他的小窝阅读~"],
+            },
+            "model": [
+                "banniang/live2d-widget-models/live2d-widget-model-wanko/assets/wanko.model.json", //狗?!
+            ]
+        });
+    </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('/announcement.json')
-        .then(response => response.json())
-        .then(data => {
-          const currentVersion = data.version;
-          const storedVersion = localStorage.getItem('version');
-  
-          if (storedVersion === null || storedVersion !== currentVersion) {
-            layui.use('layer', function() {
-              var layer = layui.layer;
-              layer.open({
-                title: '更新公告',
-                content: data.message,
-                btn: ['确定'],
-                yes: function(index, layero) {
-                  // 关闭弹窗
-                  layer.close(index);
-                }
-              });
-            });
-            localStorage.setItem('version', currentVersion);
-          }
-        })
-        .catch(error => console.error('Error fetching announcement:', error));
-    });
-  </script>
+
 
 </body>
 
