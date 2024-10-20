@@ -69,7 +69,7 @@ var Paul_Pio = function (prop) {
         skin: modules.create("span", {class: "pio-skin"}),
         info: modules.create("span", {class: "pio-info"}),
         sentence: modules.create("span", {class: "pio-sentence"}),
-        //close: modules.create("span", {class: "pio-close"}),
+        close: modules.create("span", {class: "pio-close"}),
 
         show: modules.create("div", {class: "pio-show"})
     };
