@@ -10,10 +10,10 @@
 <body translate="no">
 
     <center>
-        <h1>
+        <h1 class="tracking-in-expand">
             Math1969.com
         </h1>
-        <div style="display: flex;align-items: center;gap:0.2rem">
+        <div style="display: flex;align-items: center;gap:0.2rem" class="fade-in">
             <b>
                 下载安卓app
             </b>
@@ -58,11 +58,12 @@
         })
     </script>
 
+    <!-- 风格切换按钮 -->
     <input type="checkbox" id="toggle-btn" />
-    <label class="toggle-btn" for="toggle-btn">切换风格</label>
+    <label class="toggle-btn bounce-in-top" for="toggle-btn">切换风格</label>
     <div class="dark-mode-mask"></div>
 
-    <div class="card-container">
+    <div id="mycardcontainer" class="card-container fade-in">
         <div class="card">
             <b>集萃</b>
             <span style="font-style: italic;">分享有意思的题目，具有一定的深度和难度</span>
@@ -81,20 +82,16 @@
         <div class="card">
             <b>试卷</b>
             <span style="font-style: italic;">评讲太中月考，周考试卷</span>
-            <a href="tz_papers/太中试卷.html" target="_blank" class="arrow-btn" style="text-decoration-line: none;"></a>
+            <a id="mybtn" href="tz_papers/太中试卷.html" target="_blank" class="arrow-btn"
+                style="text-decoration-line: none;"></a>
         </div>
     </div>
 
-    <div class="textshow">
-        <p>
-                这是一段话,红红火火恍恍惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-            红红火火恍恍惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-            红红火火恍恍惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈红红火火恍恍惚惚哈哈哈哈哈哈哈哈哈哈哈哈
-        </p>
-        <p>
-            这是另外一段话
-        </p>
-    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('mycardcontainer').classList.remove('fade-in');
+        },1500)
+    </script>
 
 </body>
 
