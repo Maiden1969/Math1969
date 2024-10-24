@@ -1,3 +1,6 @@
+/* 黑白风格UI 
+作者：zkr
+*/
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
 
@@ -28,6 +31,7 @@ body {
     font-family: "Aboreto", sans-serif;
 }
 
+/* 卡片和卡片容器 */
 .card {
     width: 5rem;
     height: 2.0rem;
@@ -37,13 +41,63 @@ body {
     justify-content: space-between;
     gap: 0.3rem;
     line-height: 1.5;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 0.3rem;
     box-shadow: 3px 3px 0 3px #222;
     cursor: crosshair;
     overflow: hidden;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 10rem;
+    /* 调整这个值以适应你的布局需求 */
+    margin: 0 auto;
+
+    .modal {
+        display: none;
+        /* 默认隐藏 */
+        position: fixed;
+        /* 固定定位 */
+        z-index: 1;
+        /* 放在最上层 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        /* 允许滚动 */
+        background-color: rgba(0, 0, 0, 0.8);
+        /* 黑色半透明背景 */
+    }
+}
+/* -------------------------- */
+
+/* 文本展示与段落 */
+.textshow {
+    width: auto;
+    height: auto;
+    padding: 0.2rem 0.2rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    border: 3px solid;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+p {
+    text-indent: 2em;
+    margin-bottom: 0em;
+}
+
+/*------------------ */
+
+/* 跳转和下载按钮 */
 .arrow-btn {
     flex-shrink: 0;
     width: 0.7rem;
@@ -79,10 +133,13 @@ body {
     font-size: 0.3rem;
 }
 
+/* ---------------- */
+
 input[type=checkbox] {
     display: none;
 }
 
+/* 风格切换 */
 input[type=checkbox]:checked~.dark-mode-mask {
     transform: scale(50);
 }
@@ -156,33 +213,4 @@ input[type=checkbox]:checked~.toggle-btn {
     }
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 10rem;
-    /* 调整这个值以适应你的布局需求 */
-    margin: 0 auto;
-
-    .modal {
-        display: none;
-        /* 默认隐藏 */
-        position: fixed;
-        /* 固定定位 */
-        z-index: 1;
-        /* 放在最上层 */
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        /* 允许滚动 */
-        background-color: rgba(0, 0, 0, 0.8);
-        /* 黑色半透明背景 */
-    }
-
-
-    
-}
+/* --------------- */
