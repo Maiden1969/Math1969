@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="./css/mycss.css">
+</head>
+
+<body translate="no">
+
+    <center>
+        <h1>
+            Math1969.com
+        </h1>
+        <div style="display: flex;align-items: center;gap:0.2rem">
+            <b>
+                下载安卓app
+            </b>
+            <a href="apk/math1969-release.apk" download="math1969-release.apk" class="arrow-btn-download"
+                target="_blank" style="text-decoration-line: none;"></a>
+            <b>
+                下载电脑应用
+            </b>
+            <a id="downloadexe" href="exe/mysetup.exe" download="mysetup.exe" class="arrow-btn-download" target="_blank"
+                style="text-decoration-line: none;"></a>
+        </div>
+
+    </center>
+
+
+    <!-- 下载setup时的提示 -->
+
+    <script>
+        document.getElementById("downloadexe").addEventListener("click", function () {
+            // 阻止默认行为，防止立即跳转
+            event.preventDefault();
+
+            // 获取下载链接
+            const downloadLink = this.getAttribute('href');
+
+            // 创建隐藏的下载链接
+            const hiddenLink = document.createElement('a');
+            hiddenLink.href = downloadLink;
+            hiddenLink.download = 'setup.exe';
+            hiddenLink.style.display = 'none';
+
+            // 添加到文档中
+            document.body.appendChild(hiddenLink);
+
+            // 触发下载
+            hiddenLink.click();
+
+            // 移除隐藏的下载链接
+            document.body.removeChild(hiddenLink);
+
+            alert("下载setup文件后，如果浏览器提示不安全，点击删除按钮右边的三个点，选择：保留->详细信息->仍然保留。运行setup文件后，进入安装程序，在第一个界面勾选Create a desktop shortcut，这是用来添加桌面快捷方式的。然后依次点击Next->Install->Finish即可");
+        })
+    </script>
+
+    <input type="checkbox" id="toggle-btn" />
+    <label class="toggle-btn" for="toggle-btn">切换风格</label>
+    <div class="dark-mode-mask"></div>
+
+    <div class="card-container">
+        <div class="card">
+            <b>集萃</b>
+            <span style="font-style: italic;">分享有意思的题目，具有一定的深度和难度</span>
+            <a href="puzzles/集萃.html" target="_blank" class="arrow-btn" style="text-decoration-line: none;"></a>
+        </div>
+        <div class="card">
+            <b>专题</b>
+            <span style="font-style: italic;"> 针对不同章节的专项练习题，以中档题为主</span>
+            <a href="puzzles/专题练习.html" target="_blank" class="arrow-btn" style="text-decoration-line: none;"></a>
+        </div>
+        <div class="card">
+            <b>复习</b>
+            <span style="font-style: italic;"> 本人编写的复习资料、讲义</span>
+            <a href="reviews/复习.html" target="_blank" class="arrow-btn" style="text-decoration-line: none;"></a>
+        </div>
+        <div class="card">
+            <b>试卷</b>
+            <span style="font-style: italic;">评讲太中月考，周考试卷</span>
+            <a href="tz_papers/太中试卷.html" target="_blank" class="arrow-btn" style="text-decoration-line: none;"></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
