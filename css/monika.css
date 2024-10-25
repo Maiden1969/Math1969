@@ -117,6 +117,35 @@ p {
 
 /*-----------*/
 
+/* 普通按钮 */
+.monika-btn-square{
+    flex-shrink: 0;
+    width: 1rem;
+    height: 0.4rem;
+    border-radius: 0;
+    background-color: #eee;
+    color:#222;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: "Aboreto", sans-serif;
+    font-size: 0.2rem;
+    font-style: oblique;
+    align-items: center;
+    border: 2px solid #222;
+    border-radius: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+.monika-btn-square:hover{
+    border:3px solid #222;
+    background-color: #fff;
+}
+.monika-btn-square:active{
+    background-color: #222;
+}
+/* ---------------- */
+
 
 
 /* 跳转和下载按钮 */
