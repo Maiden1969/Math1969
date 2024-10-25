@@ -9,12 +9,13 @@
 }
 
 html {
-    font-size: 6.25vmax;
+    /* font-size: 6.25vmax; */
+    font-size:100px
 }
 
 @media (max-width: 992px) {
     html {
-        font-size: 120px;
+        font-size: 60px;
     }
 }
 
