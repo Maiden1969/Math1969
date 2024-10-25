@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/monika.css">
+    <title>Math1969</title>
     <script src="./js/monika.js"></script>
 </head>
 
@@ -11,7 +12,7 @@
 
     <center>
         <h1 class="monika-anim-tracking-in-expand">
-            Math1969.com
+            Math1969
         </h1>
         <div style="display: flex;align-items: center;gap:0.2rem" class="monika-anim-fade-in">
             <b>
@@ -22,8 +23,8 @@
             <b>
                 下载电脑应用
             </b>
-            <a id="downloadexe" href="exe/mysetup.exe" download="mysetup.exe" class="monika-btn-arrow-bottom" target="_blank"
-                style="text-decoration-line: none;"></a>
+            <a id="downloadexe" href="exe/mysetup.exe" download="mysetup.exe" class="monika-btn-arrow-bottom"
+                target="_blank" style="text-decoration-line: none;"></a>
         </div>
 
     </center>
@@ -32,7 +33,7 @@
     <!-- 下载setup时的提示 -->
 
     <script>
-    
+
         document.getElementById("downloadexe").addEventListener("click", function () {
             // 阻止默认行为，防止立即跳转
             event.preventDefault();
@@ -68,17 +69,20 @@
         <div class="monika-card">
             <b>集萃</b>
             <span style="font-style: italic;">分享有意思的题目，具有一定的深度和难度</span>
-            <a href="puzzles/集萃.html" target="_blank" class="monika-btn-arrow-right" style="text-decoration-line: none;"></a>
+            <a href="puzzles/集萃.html" target="_blank" class="monika-btn-arrow-right"
+                style="text-decoration-line: none;"></a>
         </div>
         <div class="monika-card">
             <b>专题</b>
             <span style="font-style: italic;"> 针对不同章节的专项练习题，以中档题为主</span>
-            <a href="puzzles/专题练习.html" target="_blank" class="monika-btn-arrow-right" style="text-decoration-line: none;"></a>
+            <a href="puzzles/专题练习.html" target="_blank" class="monika-btn-arrow-right"
+                style="text-decoration-line: none;"></a>
         </div>
         <div class="monika-card">
             <b>复习</b>
             <span style="font-style: italic;"> 本人编写的复习资料、讲义</span>
-            <a href="reviews/复习.html" target="_blank" class="monika-btn-arrow-right" style="text-decoration-line: none;"></a>
+            <a href="reviews/复习.html" target="_blank" class="monika-btn-arrow-right"
+                style="text-decoration-line: none;"></a>
         </div>
         <div class="monika-card">
             <b>试卷</b>
@@ -89,10 +93,31 @@
     </div>
 
     <script>
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById('mycardcontainer').classList.remove('monika-anim-fade-in');
-        },1500)
+        }, 1500)
     </script>
+
+    <form action="/login" method="post">
+        <label for="username">用户名:</label>
+        <input type="text"
+        id="username"
+        name="username"
+        class="monika-input"
+        onclick="addShadowPopBr(event)"
+        onblur="removeShadowPopBr(event)">
+        <br><br>
+        <label for="password">密码:</label>
+        <input type="password"
+        id="password" 
+        name="password" 
+        class="monika-input" 
+        onclick="addShadowPopBr(event)"
+        onblur="removeShadowPopBr(event)"
+        required>
+        <br><br>
+        <button type="submit">登录</button>
+    </form>
 
 </body>
 
