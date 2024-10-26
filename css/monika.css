@@ -36,6 +36,7 @@ body {
     width: auto;
     height: auto;
     padding: 0.3rem 0.3rem;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,6 +48,7 @@ body {
     cursor: crosshair;
     overflow: hidden;
 }
+
 
 .monika-card-container {
     display: grid;
