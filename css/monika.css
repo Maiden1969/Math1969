@@ -36,6 +36,10 @@ body {
     font-family: "Aboreto", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* 卡片和卡片容器 */
 .monika-card {
     width: auto;
@@ -54,11 +58,29 @@ body {
     overflow: hidden;
 }
 
+.monika-card-vertical {
+    width: auto;
+    height: auto;
+    padding: 0.3rem 0.3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    line-height: 1.5;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    box-shadow: 3px 3px 0 3px #222;
+    cursor: crosshair;
+    overflow: hidden;
+}
+
 
 .monika-card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(autofit,minmax(5rem,10rem));
     gap: 0.5rem;
     width: 100%;
     max-width: 10rem;

@@ -4,21 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quick Start - Layui</title>
-  <!-- 引入layui.css -->
-  <link rel="stylesheet" href="../layui/css/layui.css">
-  <!-- 确保桌面应用的背景是白色 原理未知-->
-  <style>
-    body {
-      background-color: white;
-    }
-  </style>
-  <!-- 引入layui.js -->
-  <script src="../layui/layui.js"></script>
-
+  <title>专题练习</title>
+  <link rel="stylesheet" href="/css/monika.css">
 </head>
 
 <body>
+  <!-- 风格切换按钮 -->
+  <input type="checkbox" id="monika-btn-toggle" />
+  <label class="monika-btn-toggle monika-anim-bounce-in-top" for="monika-btn-toggle">切换风格</label>
+  <div class="monika-mask-dark-mode"></div>
   <script>
     !function () {
       function n(n, e, t) {
@@ -64,43 +58,25 @@
       }, 100)
     }();
   </script>
-  <div class="layui-bg-gray" style="padding: 16px 50px 16px 50px;">
-    <div class="layui-row layui-col-space30">
-      <div class="layui-col-md6">
-        <div class="layui-card">
-          <fieldset class="layui-elem-field">
-            <center>
-              <legend>直线与圆_1</legend>
-              <div class="layui-field-box">
-                <blockquote class="layui-elem-quote" style="font-style: italic;">
-                  题目数：9
-                </blockquote>
-                <a href="专题练习/直线与圆/题集1/专题练习_直线与圆_1.html" class="layui-btn" target="_blank">在线浏览</a>
-                <a href="专题练习/直线与圆/题集1/专题练习_直线与圆_1.pdf" class="layui-btn layui-bg-blue"
-                  download="专题练习_直线与圆_1.pdf">下载pdf(可打印)</a>
-              </div>
-            </center>
-          </fieldset>
-        </div>
-      </div>
-      <div class="layui-col-md6">
-        <div class="layui-card">
-          <fieldset class="layui-elem-field">
-            <center>
-              <legend>圆锥曲线_1</legend>
-              <div class="layui-field-box">
-                <blockquote class="layui-elem-quote" style="font-style: italic;">
-                  题目数：9
-                </blockquote>
-                <a href="专题练习/圆锥曲线/题集1/专题练习_圆锥曲线_1.html" class="layui-btn" target="_blank">在线浏览</a>
-                <a href="专题练习/圆锥曲线/题集1/专题练习_圆锥曲线_1.pdf" class="layui-btn layui-bg-blue"
-                  download="专题练习_圆锥曲线_1.pdf">下载pdf(可打印)</a>
-              </div>
-            </center>
-          </fieldset>
-        </div>
-      </div>
+
+  <div id="jicuicontainer" class="monika-card-container monika-anim-fade-in">
+    <div class="monika-card-vertical">
+      <b>直线与圆_1</b>
+      <span style="font-style: italic;"> 题量:9</span>
+      <span style="display: flex;gap:0.5rem">
+        <a href="专题练习/直线与圆/题集1/专题练习_直线与圆_1.html" class="monika-btn-square" target="_blank">浏览</a>
+        <a href="专题练习/直线与圆/题集1/专题练习_直线与圆_1.pdf" class="monika-btn-square" download="专题练习_直线与圆_1.pdf">下载</a>
+      </span>
     </div>
+    <div class="monika-card-vertical">
+      <b>圆锥曲线_1</b>
+      <span style="font-style: italic;"> 题量:9</span>
+      <span style="display: flex;gap:0.5rem">
+        <a href="专题练习/圆锥曲线/题集1/专题练习_圆锥曲线_1.html" class="monika-btn-square" target="_blank">浏览</a>
+        <a href="专题练习/圆锥曲线/题集1/专题练习_圆锥曲线_1.pdf" class="monika-btn-square" download="专题练习_圆锥曲线_1.pdf">下载</a>
+      </span>
+    </div>
+
   </div>
 
 </body>
